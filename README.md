@@ -28,8 +28,6 @@ Here's a walkthrough of implemented features:
 
 <img src='web102-prework.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-![Prework GIF](web102-prework.gif)
-
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with LiceCap.
 <!-- Recommended tools:
