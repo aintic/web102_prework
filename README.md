@@ -4,23 +4,23 @@ Submitted by: **Alice Nguyen**
 
 **Gametreon** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **6.5** hours spent in total. 4.5 hours for required functionality. 2 hours for optional features.
+Time spent: **6.5** hours spent in total. **4.5** hours for required functionality. **2** hours for optional features.
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-* [ ] The introduction section explains the background of the company and how many games remain unfunded.
-* [ ] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
-* [ ] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
-* [ ] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
+* [x] The introduction section explains the background of the company and how many games remain unfunded.
+* [x] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
+* [x] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
+* [x] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
 
 The following **optional** features are implemented:
 
-* [ ] User can navigate to each section using navigation bar.
-* [ ] User can search a game by name. Upon pressing enter or "Search" button, user is taken to the search result.
-* [ ] User can sort games in descending order by name, goal, pledges, backers or none (unsorted).
-* [ ] CSS stlyling changes.
+* [x] User can navigate to each section using navigation bar.
+* [x] User can search a game by name. Upon pressing enter or "Search" button, user is taken to the search result.
+* [x] User can sort games in descending order by name, goal, pledges, backers or none (unsorted).
+* [x] CSS stlyling changes.
 
 ## Video Walkthrough
 
@@ -39,8 +39,8 @@ GIF created with LiceCap.
 
 Describe any challenges encountered while building the app.
 
-* [ ] Choosing CSS styling
-* [ ] Making sure user can revert to unsorted
+* Choosing CSS styling
+* Making sure user can revert to unsorted
 
 ## License
 
