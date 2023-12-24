@@ -11,6 +11,7 @@ import GAMES_DATA from './games.js';
 const GAMES_JSON = JSON.parse(GAMES_DATA)
 
 var displayedGames;
+var sorted;
 
 // remove all child elements from a parent element in the DOM
 function deleteChildElements(parent) {
@@ -32,6 +33,11 @@ function addGamesToPage(games) {
 
     // loop over each item in the data
     for (let game of games) {
+
+        // set the currently displayed games
+        if (!sorted) {
+            displayedGames = games;
+        }
 
         // create a new div element, which will become the game card
         let gameCard = document.createElement("div");
@@ -61,8 +67,6 @@ function addGamesToPage(games) {
 // later, we'll call this function using a different list of games
 addGamesToPage(GAMES_JSON);
 
-// set the currently displayed games
-displayedGames = GAMES_JSON;
 /*************************************************************************************
  * Challenge 4: Create the summary statistics at the top of the page displaying the
  * total number of contributions, amount donated, and number of games on the site.
@@ -119,8 +123,6 @@ function filterUnfundedOnly() {
         return game.pledged < game.goal;
     });
 
-    displayedGames = unfundedGames;
-
     // use the function we previously created to add the unfunded games to the DOM
     addGamesToPage(unfundedGames);
 }
@@ -134,8 +136,6 @@ function filterFundedOnly() {
         return game.pledged >= game.goal;
     });
 
-    displayedGames = fundedGames;
-
     // use the function we previously created to add unfunded games to the DOM
     addGamesToPage(fundedGames);
 }
@@ -143,8 +143,6 @@ function filterFundedOnly() {
 // show all games
 function showAllGames() {
     deleteChildElements(gamesContainer);
-
-    displayedGames = GAMES_JSON;
 
     // add all games from the JSON data to the DOM
     addGamesToPage(GAMES_JSON);
@@ -275,6 +273,9 @@ categories.forEach(category => {
             return;
         }
         else {
+            // set sort variable
+            sorted = true;
+
             // sort in descending order by the selected category
             // deep clone the displayed games array since sort is in place
             let sortedGames = JSON.parse(JSON.stringify(displayedGames)).sort ((item1, item2) => {
@@ -287,6 +288,9 @@ categories.forEach(category => {
 
             // show sorted games
             addGamesToPage(sortedGames);
+
+            // set sort variable
+            sorted = false;
         }
     });
 });
